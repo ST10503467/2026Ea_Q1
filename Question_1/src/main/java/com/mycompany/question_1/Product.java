@@ -15,7 +15,7 @@ public class Product implements IProducts {
 
     @Override
     public double GetAverageProductSold(int[][] Product) {
-        double AverageProductsSold = 0;
+        double AverageProductSold = 0;
         int ProductsSoldAmount = 0;
         double TotalProductsSoldAvgCalculation = 0;
         for (int i = 0; i < Product.length; i++) {
@@ -24,8 +24,8 @@ public class Product implements IProducts {
                 TotalProductsSoldAvgCalculation += Product[i][j];
             }
         }
-        AverageProductsSold = TotalProductsSoldAvgCalculation / ProductsSoldAmount;
-        return AverageProductsSold;
+        AverageProductSold = TotalProductsSoldAvgCalculation / ProductsSoldAmount;
+        return AverageProductSold;
     }
 
     @Override

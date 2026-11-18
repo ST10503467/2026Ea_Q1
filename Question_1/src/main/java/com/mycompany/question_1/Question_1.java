@@ -37,5 +37,24 @@ public class Question_1 {
             {RestonicBarbados1, RestonicBarbados2, RestonicBarbados3},
             {SealyPhuket1, SealyPhuket2, SealyPhuket3}
         };
+        
+        int[] TotalSales = {CozyNightsMonarchTotal, RestonicBarbadosTotal, SealyPhuketTotal};
+        
+        Product report = new Product();
+        report.GetTotalProductsSold(ProductSales);
+        report.GetAverageProductSold(ProductSales);
+        report.GetMostPopularProduct(TotalSales);
+        
+        int TotalProductSold = report.GetTotalProductsSold(ProductSales);
+        int AverageProductSold = (int) report.GetAverageProductSold(ProductSales);
+        String MostPopularProduct = report.GetMostPopularProduct(TotalSales);
+        
+        System.out.println("PRODUCT SALES REPORT - 2026");
+        System.out.println("");
+        System.out.println("********************************************");
+        System.out.println("TOTAL PRODUCT SALES: " + TotalProductSold);
+        System.out.println("AVERAGE PRODUCT SALES: " + AverageProductSold);
+        System.out.println("MOST POPULAR PRODUCT: " + MostPopularProduct);
     }
 }
+ 
