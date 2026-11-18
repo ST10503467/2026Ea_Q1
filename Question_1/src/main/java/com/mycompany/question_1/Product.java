@@ -1,13 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.question_1;
 
-/**
- *
- * @author bennj
- */
-public class Product {
+public class Product implements IProducts {
+
+    @Override
+    public int GetTotalProductsSold(int [][] Product) {
+        int TotalProductsSold = 0;
+        for (int i = 0; i < Product.length; i++) {
+            for (int j = 0; j < Product[i].length; j++) {
+                TotalProductsSold += Product[i][j];
+            }
+        }
+        return TotalProductsSold;
+    }
+
+    @Override
+    public double GetAverageProductSold() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public String GetMostPopularProduct() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
     
 }
